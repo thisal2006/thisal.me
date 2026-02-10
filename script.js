@@ -4,12 +4,14 @@ toggle.addEventListener('click', () => {
     toggle.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 });
 
+// Typing Effect (faster for engagement)
 const typed = new Typed('#typed-profile', {
     strings: ['19-year-old ambitious undergraduate at the Informatics Institute of Technology (IIT), pursuing studies in technology since 2023. Early university entrant with a strong foundation in Python programming, Java and web development. Certified in Quantum Computing, Transformer-based NLP, Artificial Intelligence, Cloud Computing (Microsoft Azure), AI Prompt Engineering (DeepLearning.AI), ChatGPT for Developers, and Zero Trust Frameworks. Creative problem-solver blending leadership, adaptability, and a passion for emerging technologies.'],
-    typeSpeed: 40,
+    typeSpeed: 50,
     loop: false
 });
 
+// Skills Radar Chart
 const ctx = document.getElementById('skillsRadar').getContext('2d');
 const radarChart = new Chart(ctx, {
     type: 'radar',
@@ -33,6 +35,7 @@ const radarChart = new Chart(ctx, {
     }
 });
 
+// Project Modals
 const modals = {
     muc: {
         title: 'MUC Digital - Smart Municipal Services Platform',
@@ -70,14 +73,20 @@ document.querySelectorAll('.project-card').forEach(card => {
             <p>${content.description}</p>
             <a href="${content.link}" target="_blank">View Project</a>
         `;
-        document.getElementById('modal').style.display = 'flex';
+        const modal = document.getElementById('modal');
+        modal.style.display = 'flex';
+        modal.style.opacity = 0;
+        setTimeout(() => { modal.style.opacity = 1; }, 10); // Fade in
     });
 });
 
 document.querySelector('.close').addEventListener('click', () => {
-    document.getElementById('modal').style.display = 'none';
+    const modal = document.getElementById('modal');
+    modal.style.opacity = 0;
+    setTimeout(() => { modal.style.display = 'none'; }, 300); // Fade out
 });
 
+// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
         e.preventDefault();
@@ -85,4 +94,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-AOS.init({ duration: 1000 });
+// Animations on Scroll (more options)
+AOS.init({ duration: 1200, easing: 'ease-in-out' });
+
+// Unique: 3D Tilt on Project Cards
+VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+    max: 25,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.5
+});
+
+// Unique: Particles Background
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#007BFF' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: false },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#007BFF', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+    },
+    interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+    },
+    retina_detect: true
+});
+
+// Unique: Confetti on Resume Download
+document.getElementById('resume-download').addEventListener('click', (e) => {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+});
