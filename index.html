@@ -8,8 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script> <!-- For 3D tilt -->
 </head>
 <body>
+    <div id="particles-js"></div> <!-- Unique particle background -->
     <header>
         <nav>
             <div class="logo">Thisal Sandayuru</div>
@@ -30,7 +32,8 @@
         <img src="assets/profile.jpg" alt="Thisal Sandayuru" class="profile-pic">
         <h1>Thisal Sandayuru</h1>
         <p>Computer Science Undergraduate</p>
-        <a href="assets/resume.pdf" download class="download-btn">Download Resume</a>
+        <a href="assets/resume.pdf" download class="download-btn" id="resume-download">Download Resume</a>
+        <canvas id="confetti-canvas"></canvas> <!-- Unique confetti on download -->
     </section>
 
     <section id="about" data-aos="fade-up">
@@ -41,7 +44,7 @@
     <section id="skills" data-aos="fade-up">
         <h2>Skills</h2>
         <div class="skills-container">
-            <div>
+            <div class="skills-group">
                 <h3>Software Knowledge</h3>
                 <ul>
                     <li>Python</li>
@@ -53,7 +56,7 @@
                     <li>UI & UX Designing</li>
                 </ul>
             </div>
-            <div>
+            <div class="skills-group">
                 <h3>Personal Skills</h3>
                 <ul>
                     <li>Creativity</li>
@@ -65,7 +68,7 @@
                     <li>Time Management</li>
                 </ul>
             </div>
-            <div>
+            <div class="skills-group">
                 <h3>Languages</h3>
                 <ul>
                     <li>Sinhala</li>
@@ -81,27 +84,27 @@
     <section id="projects" data-aos="fade-up">
         <h2>Projects</h2>
         <div class="projects-grid">
-            <div class="project-card" data-modal="muc">
+            <div class="project-card" data-modal="muc" data-tilt>
                 <img src="assets/muc-digital.jpg" alt="MUC Digital">
                 <h3>MUC Digital</h3>
                 <p>Smart Municipal Services Platform</p>
             </div>
-            <div class="project-card" data-modal="wavelink">
+            <div class="project-card" data-modal="wavelink" data-tilt>
                 <img src="assets/wavelink.jpg" alt="WaveLink">
                 <h3>WaveLink Mobile App</h3>
                 <p>Gamified ocean conservation</p>
             </div>
-            <div class="project-card" data-modal="climate">
+            <div class="project-card" data-modal="climate" data-tilt>
                 <img src="assets/climate-changers.jpg" alt="Climate Changers">
                 <h3>Climate Changers</h3>
                 <p>Interactive Climate Awareness Web App</p>
             </div>
-            <div class="project-card" data-modal="traffic">
+            <div class="project-card" data-modal="traffic" data-tilt>
                 <img src="assets/traffic-analyzer.jpg" alt="Traffic Analyzer">
                 <h3>Traffic Insights</h3>
                 <p>Visualization for Local Governance</p>
             </div>
-            <div class="project-card" data-modal="construct">
+            <div class="project-card" data-modal="construct" data-tilt>
                 <img src="assets/construct-connect.jpg" alt="Construct Connect">
                 <h3>Construct Connect</h3>
                 <p>Talent Platform for Construction</p>
@@ -120,6 +123,7 @@
         <h2>Education</h2>
         <div class="timeline">
             <div class="timeline-item">
+                <i class="fas fa-graduation-cap timeline-icon"></i>
                 <h3>B.Sc. (Hons) Computer Science</h3>
                 <p>University of Westminster / IIT (2024-2028)</p>
                 <ul>
@@ -128,10 +132,12 @@
                 </ul>
             </div>
             <div class="timeline-item">
+                <i class="fas fa-certificate timeline-icon"></i>
                 <h3>Foundation Certificate in Software Engineering</h3>
                 <p>IIT (2023-2024) - Pass-Merit</p>
             </div>
             <div class="timeline-item">
+                <i class="fas fa-school timeline-icon"></i>
                 <h3>GCE Ordinary Level</h3>
                 <p>Mahanama College Colombo 03, Sri Lanka</p>
                 <ul>
@@ -189,6 +195,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> <!-- Particles -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script> <!-- Confetti -->
     <script src="script.js"></script>
 </body>
 </html>
