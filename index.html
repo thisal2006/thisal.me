@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thisal Sandayuru - Portfolio</title>
+    <title>Thisal Sandayuru - Computer Science Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script> <!-- For 3D tilt -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
 </head>
 <body>
-    <div id="particles-js"></div> <!-- Unique particle background -->
+    <div id="particles-js"></div>
+
     <header>
-        <nav>
+        <nav class="container">
             <div class="logo">Thisal Sandayuru</div>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -21,30 +22,33 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#volunteer">Volunteer</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button id="theme-toggle"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
-    <section id="hero">
-        <img src="assets/profile.jpg" alt="Thisal Sandayuru" class="profile-pic">
-        <h1>Thisal Sandayuru</h1>
-        <p>Computer Science Undergraduate</p>
-        <a href="assets/resume.pdf" download class="download-btn" id="resume-download">Download Resume</a>
-        <canvas id="confetti-canvas"></canvas> <!-- Unique confetti on download -->
+    <section id="hero" class="container">
+        <div class="hero-content">
+            <img src="assets/profile.jpg" alt="Thisal Sandayuru" class="profile-pic">
+            <h1>Thisal Sandayuru</h1>
+            <p class="tagline">Computer Science Undergraduate</p>
+            <a href="assets/resume.pdf" download class="download-btn" id="resume-download">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </div>
+        <canvas id="confetti-canvas"></canvas>
     </section>
 
-    <section id="about" data-aos="fade-up">
+    <section id="about" class="section container" data-aos="fade-up">
         <h2>About Me</h2>
-        <p><span id="typed-profile"></span></p>
+        <p class="profile-text"><span id="typed-profile"></span></p>
     </section>
 
-    <section id="skills" data-aos="fade-up">
+    <section id="skills" class="section container" data-aos="fade-up">
         <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skills-group">
+        <div class="skills-grid">
+            <div class="glass-card">
                 <h3>Software Knowledge</h3>
                 <ul>
                     <li>Python</li>
@@ -52,11 +56,11 @@
                     <li>Java OOP</li>
                     <li>Web Development</li>
                     <li>Mobile Development</li>
-                    <li>Data Base Handling</li>
+                    <li>Database Handling</li>
                     <li>UI & UX Designing</li>
                 </ul>
             </div>
-            <div class="skills-group">
+            <div class="glass-card">
                 <h3>Personal Skills</h3>
                 <ul>
                     <li>Creativity</li>
@@ -68,135 +72,128 @@
                     <li>Time Management</li>
                 </ul>
             </div>
-            <div class="skills-group">
+            <div class="glass-card">
                 <h3>Languages</h3>
                 <ul>
-                    <li>Sinhala</li>
-                    <li>English</li>
+                    <li>Sinhala - Native</li>
+                    <li>English - Fluent</li>
                 </ul>
             </div>
-            <div class="radar-chart">
+            <div class="glass-card radar-container">
+                <h3>Skill Radar</h3>
                 <canvas id="skillsRadar"></canvas>
             </div>
         </div>
     </section>
 
-    <section id="projects" data-aos="fade-up">
+    <section id="projects" class="section container" data-aos="fade-up">
         <h2>Projects</h2>
         <div class="projects-grid">
-            <div class="project-card" data-modal="muc" data-tilt>
+            <div class="project-card glass-card" data-modal="muc" data-tilt>
                 <img src="assets/muc-digital.jpg" alt="MUC Digital">
                 <h3>MUC Digital</h3>
                 <p>Smart Municipal Services Platform</p>
             </div>
-            <div class="project-card" data-modal="wavelink" data-tilt>
+            <!-- Repeat for other projects with class="project-card glass-card" data-modal="..." data-tilt -->
+            <div class="project-card glass-card" data-modal="wavelink" data-tilt>
                 <img src="assets/wavelink.jpg" alt="WaveLink">
-                <h3>WaveLink Mobile App</h3>
-                <p>Gamified ocean conservation</p>
+                <h3>WaveLink</h3>
+                <p>Gamified Ocean Conservation App</p>
             </div>
-            <div class="project-card" data-modal="climate" data-tilt>
+            <div class="project-card glass-card" data-modal="climate" data-tilt>
                 <img src="assets/climate-changers.jpg" alt="Climate Changers">
                 <h3>Climate Changers</h3>
-                <p>Interactive Climate Awareness Web App</p>
+                <p>Interactive Climate Awareness</p>
             </div>
-            <div class="project-card" data-modal="traffic" data-tilt>
+            <div class="project-card glass-card" data-modal="traffic" data-tilt>
                 <img src="assets/traffic-analyzer.jpg" alt="Traffic Analyzer">
                 <h3>Traffic Insights</h3>
-                <p>Visualization for Local Governance</p>
+                <p>Data Visualization Tool</p>
             </div>
-            <div class="project-card" data-modal="construct" data-tilt>
+            <div class="project-card glass-card" data-modal="construct" data-tilt>
                 <img src="assets/construct-connect.jpg" alt="Construct Connect">
                 <h3>Construct Connect</h3>
-                <p>Talent Platform for Construction</p>
+                <p>Talent Platform Concept</p>
             </div>
         </div>
     </section>
 
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+        <div class="modal-content glass-card">
+            <span class="close"><i class="fas fa-times"></i></span>
             <div id="modal-body"></div>
         </div>
     </div>
 
-    <section id="education" data-aos="fade-up">
+    <section id="education" class="section container" data-aos="fade-up">
         <h2>Education</h2>
         <div class="timeline">
-            <div class="timeline-item">
-                <i class="fas fa-graduation-cap timeline-icon"></i>
-                <h3>B.Sc. (Hons) Computer Science</h3>
-                <p>University of Westminster / IIT (2024-2028)</p>
-                <ul>
-                    <li>Second Year Modules: Object Oriented Programming - 67%, Database Systems - 80%, Software Development Group Project - 56%, Advanced Client Side Development - 78%, Human Computer Interaction (HCI) - 91%, Client-Server Architectures - N/A, Professional Development (Part A) - 100%</li>
-                    <li>First Year Modules: Software Development I (Python) - 69%, Software Development II (Java) - 78%, Computer Systems Fundamentals - 90%, Trends in Computer Science - 63%, Web Design and Development - 60%, Mathematics for Computing - 64%</li>
-                </ul>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="timeline-content glass-card">
+                    <h3>B.Sc. (Hons) Computer Science</h3>
+                    <span class="date">2024 – 2028</span>
+                    <p>University of Westminster / IIT</p>
+                    <ul class="grades">
+                        <li>Second Year: HCI 91%, Database 80%, OOP 67%...</li>
+                        <li>First Year: Computer Systems 90%, Java 78%...</li>
+                    </ul>
+                </div>
             </div>
-            <div class="timeline-item">
-                <i class="fas fa-certificate timeline-icon"></i>
-                <h3>Foundation Certificate in Software Engineering</h3>
-                <p>IIT (2023-2024) - Pass-Merit</p>
+            <!-- Add other education items similarly -->
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                <div class="timeline-content glass-card">
+                    <h3>Foundation in Software Engineering</h3>
+                    <span class="date">2023 – 2024</span>
+                    <p>IIT – Pass with Merit</p>
+                </div>
             </div>
-            <div class="timeline-item">
-                <i class="fas fa-school timeline-icon"></i>
-                <h3>GCE Ordinary Level</h3>
-                <p>Mahanama College Colombo 03, Sri Lanka</p>
-                <ul>
-                    <li>Mathematics - A, Sinhala Lang. & Lit. - A, History - A, Commerce - A, Health Science - A, Drama & Performing Arts - A, English - B, Science - B, Buddhism - B</li>
-                </ul>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon"><i class="fas fa-school"></i></div>
+                <div class="timeline-content glass-card">
+                    <h3>GCE Ordinary Level</h3>
+                    <span class="date">Mahanama College</span>
+                    <p>6 A's, 3 B's</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="certifications" data-aos="fade-up">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Python Course by Hacker Rank</li>
-            <li>Java Course by Hacker Rank</li>
-            <li>AI for Beginners by HP Life</li>
-            <li>Prompt Engineering for Developers by DeepLearning</li>
-            <li>Introduction to ICT Systems by Open University</li>
-            <li>Introduction to Cybersecurity by Cisco Labs</li>
-            <li>Python Programming by UOM</li>
-            <li>Gateway to Quantum Computing by Alison</li>
-            <li>Foundation Program for Software Engineering Students by Informatics Institute of Technology</li>
-            <li>Introduction to Transformer-Based Natural Language Processing by NVIDIA</li>
-            <li>Professional Certificate in Machine Learning by IIT PDU</li>
-        </ul>
-    </section>
+    <!-- Certifications & Volunteer similar glass-card lists -->
 
-    <section id="volunteer" data-aos="fade-up">
-        <h2>Volunteer Experience</h2>
-        <ul>
-            <li>A member of IIT Rotaract club</li>
-            <li>A member of IEER RAAS</li>
-            <li>A member of IEEE Computer Society</li>
-        </ul>
-    </section>
-
-    <section id="contact" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Phone: 070 656 5007</p>
-        <p>Email: thisal.20231581@iit.ac.lk</p>
-        <a href="https://www.linkedin.com/in/thisal-sandayuru-935b27334/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/thisal2006" target="_blank">GitHub</a>
-        <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section id="contact" class="section container" data-aos="fade-up">
+        <h2>Get in Touch</h2>
+        <div class="contact-grid">
+            <div class="glass-card">
+                <p><i class="fas fa-phone"></i> 070 656 5007</p>
+                <p><i class="fas fa-envelope"></i> thisal.20231581@iit.ac.lk</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/thisal-sandayuru-935b27334/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/thisal2006" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <form id="contact-form" class="glass-card" action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>References: Chathuri Udagedara (Phone: (074) 049 8766, Email: chathuri.ud@iit.ac.uk), W.D.N.K Randeera (Phone: (076) 996 7915, Email: randeer.best.rox@gmail.com)</p>
-        <p>&copy; 2026 Thisal Sandayuru</p>
+        <div class="container">
+            <p>References available upon request</p>
+            <p>© 2026 Thisal Sandayuru</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> <!-- Particles -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script> <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

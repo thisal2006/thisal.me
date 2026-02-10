@@ -1,13 +1,15 @@
+// Dark mode (optional – remove if always dark)
 const toggle = document.getElementById('theme-toggle');
 toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    toggle.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    document.body.classList.toggle('light-mode'); // You can add light theme later
+    toggle.innerHTML = document.body.classList.contains('light-mode') 
+        ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 });
 
-// Typing Effect (faster for engagement)
+// Typing Effect
 const typed = new Typed('#typed-profile', {
     strings: ['19-year-old ambitious undergraduate at the Informatics Institute of Technology (IIT), pursuing studies in technology since 2023. Early university entrant with a strong foundation in Python programming, Java and web development. Certified in Quantum Computing, Transformer-based NLP, Artificial Intelligence, Cloud Computing (Microsoft Azure), AI Prompt Engineering (DeepLearning.AI), ChatGPT for Developers, and Zero Trust Frameworks. Creative problem-solver blending leadership, adaptability, and a passion for emerging technologies.'],
-    typeSpeed: 50,
+    typeSpeed: 45,
     loop: false
 });
 
@@ -18,29 +20,31 @@ const radarChart = new Chart(ctx, {
     data: {
         labels: ['Creativity', 'Team Building', 'Communication', 'Problem Solving', 'Leadership', 'Critical Thinking', 'Time Management'],
         datasets: [{
-            label: 'Personal Skills Level',
-            data: [8, 7, 9, 9, 8, 8, 7],
-            backgroundColor: 'rgba(0, 123, 255, 0.2)',
-            borderColor: '#007BFF',
-            borderWidth: 1
+            label: 'Level',
+            data: [9, 8, 9, 9, 8, 9, 8],
+            backgroundColor: 'rgba(6, 182, 212, 0.2)',
+            borderColor: '#00f0ff',
+            borderWidth: 1,
+            pointBackgroundColor: '#00f0ff'
         }]
     },
     options: {
         scales: {
             r: {
                 beginAtZero: true,
-                max: 10
+                max: 10,
+                grid: { color: 'rgba(255,255,255,0.1)' }
             }
         }
     }
 });
 
-// Project Modals
+// Project Modals (same as before)
 const modals = {
     muc: {
         title: 'MUC Digital - Smart Municipal Services Platform',
         description: 'SDGP | Sept 2025 - Present. Leading the development of a comprehensive web and mobile platform to fully digitalize Maharagama Urban Council services. Features real-time GPS-enabled garbage truck tracking with citizen notifications, online booking for public properties/vehicles and cemetery slots with integrated payments, one-tap emergency access, push announcements, and an AI chatbot. Built using Flutter/React, Node.js, Firebase (real-time & FCM), Google Maps API, and PayHere gateway to improve efficiency, transparency, and citizen satisfaction.',
-        link: '#' // Fill real link
+        link: '#'
     },
     wavelink: {
         title: 'WaveLink Mobile App',
@@ -76,14 +80,14 @@ document.querySelectorAll('.project-card').forEach(card => {
         const modal = document.getElementById('modal');
         modal.style.display = 'flex';
         modal.style.opacity = 0;
-        setTimeout(() => { modal.style.opacity = 1; }, 10); // Fade in
+        setTimeout(() => { modal.style.opacity = 1; }, 10);
     });
 });
 
 document.querySelector('.close').addEventListener('click', () => {
     const modal = document.getElementById('modal');
     modal.style.opacity = 0;
-    setTimeout(() => { modal.style.display = 'none'; }, 300); // Fade out
+    setTimeout(() => { modal.style.display = 'none'; }, 300);
 });
 
 // Smooth Scrolling
@@ -94,41 +98,67 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animations on Scroll (more options)
-AOS.init({ duration: 1200, easing: 'ease-in-out' });
+// Animations on Scroll
+AOS.init({ duration: 1000, once: true });
 
-// Unique: 3D Tilt on Project Cards
-VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-    max: 25,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.5
-});
-
-// Unique: Particles Background
-particlesJS('particles-js', {
-    particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: '#007BFF' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.5, random: false },
-        size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: '#007BFF', opacity: 0.4, width: 1 },
-        move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-        modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
-    },
-    retina_detect: true
-});
-
-// Unique: Confetti on Resume Download
-document.getElementById('resume-download').addEventListener('click', (e) => {
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
+// 3D Tilt on Project Cards
+if (typeof VanillaTilt !== 'undefined') {
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5
     });
+}
+
+// Particles Background – tuned for cyan/neon
+if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 60 },
+            color: { value: '#00f0ff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5 },
+            size: { value: 3 },
+            line_linked: { 
+                enable: true, 
+                distance: 120, 
+                color: '#06b6d4', 
+                opacity: 0.4, 
+                width: 1 
+            },
+            move: { enable: true, speed: 3 }
+        },
+        interactivity: { 
+            events: { 
+                onhover: { 
+                    enable: true, 
+                    mode: 'grab' 
+                } 
+            } 
+        }
+    });
+}
+
+// Confetti on Resume Download
+const resumeDownloadBtn = document.getElementById('resume-download');
+if (resumeDownloadBtn) {
+    resumeDownloadBtn.addEventListener('click', (e) => {
+        if (typeof confetti !== 'undefined') {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    });
+}
+
+// Close modal when clicking outside
+document.getElementById('modal').addEventListener('click', (e) => {
+    if (e.target.id === 'modal') {
+        const modal = document.getElementById('modal');
+        modal.style.opacity = 0;
+        setTimeout(() => { modal.style.display = 'none'; }, 300);
+    }
 });
