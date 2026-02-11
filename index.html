@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thisal Sandayuru - Computer Science Portfolio</title>
+    <title>Thisal Sandayuru – Code Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
 </head>
 <body>
-    <div id="particles-js"></div>
+    <canvas id="matrix-rain"></canvas>
 
     <header>
         <nav class="container">
-            <div class="logo">Thisal Sandayuru</div>
+            <div class="logo"><span class="code-tag">&lt;</span>Thisal Sandayuru<span class="code-tag">/&gt;</span></div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#certifications">Certs</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+            <button id="theme-toggle"><i class="fas fa-terminal"></i></button>
         </nav>
     </header>
 
@@ -32,94 +33,96 @@
         <div class="hero-content">
             <img src="assets/profile.jpg" alt="Thisal Sandayuru" class="profile-pic">
             <h1>Thisal Sandayuru</h1>
-            <p class="tagline">Computer Science Undergraduate</p>
+            <p class="tagline">Computer Science Undergraduate • Code Enthusiast</p>
             <a href="assets/resume.pdf" download class="download-btn" id="resume-download">
-                <i class="fas fa-download"></i> Download Resume
+                <i class="fas fa-file-code"></i> Download Resume.pdf
             </a>
         </div>
-        <canvas id="confetti-canvas"></canvas>
     </section>
 
     <section id="about" class="section container" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p class="profile-text"><span id="typed-profile"></span></p>
+        <h2>whoami</h2>
+        <pre class="profile-text"><span id="typed-profile"></span></pre>
     </section>
 
     <section id="skills" class="section container" data-aos="fade-up">
-        <h2>Skills</h2>
+        <h2>Skills & Stack</h2>
         <div class="skills-grid">
-            <div class="glass-card">
+            <div class="code-card">
                 <h3>Software Knowledge</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>Java OOP</li>
-                    <li>Web Development</li>
-                    <li>Mobile Development</li>
-                    <li>Database Handling</li>
-                    <li>UI & UX Designing</li>
-                </ul>
+                <pre><code>Python
+Java
+Java OOP
+Web Development
+Mobile Development
+Database Handling
+UI & UX Designing</code></pre>
             </div>
-            <div class="glass-card">
+            <div class="code-card">
                 <h3>Personal Skills</h3>
-                <ul>
-                    <li>Creativity</li>
-                    <li>Team Building</li>
-                    <li>Communication</li>
-                    <li>Problem Solving</li>
-                    <li>Leadership</li>
-                    <li>Critical Thinking</li>
-                    <li>Time Management</li>
-                </ul>
+                <pre><code>Creativity
+Team Building
+Communication
+Problem Solving
+Leadership
+Critical Thinking
+Time Management</code></pre>
             </div>
-            <div class="glass-card">
+            <div class="code-card">
                 <h3>Languages</h3>
-                <ul>
-                    <li>Sinhala - Native</li>
-                    <li>English - Fluent</li>
-                </ul>
+                <pre><code>Sinhala – Native
+English – Fluent</code></pre>
             </div>
-            <div class="glass-card radar-container">
-                <h3>Skill Radar</h3>
+            <div class="code-card radar-container">
+                <h3>Skill Radar (Debug View)</h3>
                 <canvas id="skillsRadar"></canvas>
             </div>
         </div>
     </section>
 
     <section id="projects" class="section container" data-aos="fade-up">
-        <h2>Projects</h2>
+        <h2>Projects /repos</h2>
         <div class="projects-grid">
-            <div class="project-card glass-card" data-modal="muc" data-tilt>
+            <div class="project-card code-card" data-modal="muc" data-tilt>
                 <img src="assets/muc-digital.jpg" alt="MUC Digital">
                 <h3>MUC Digital</h3>
-                <p>Smart Municipal Services Platform</p>
+                <pre><code>// Smart Municipal Platform
+// SDGP | Sept 2025 – Present
+Flutter + React + Node.js + Firebase + Google Maps + PayHere + AI Chatbot</code></pre>
             </div>
-            <!-- Repeat for other projects with class="project-card glass-card" data-modal="..." data-tilt -->
-            <div class="project-card glass-card" data-modal="wavelink" data-tilt>
+            <div class="project-card code-card" data-modal="wavelink" data-tilt>
                 <img src="assets/wavelink.jpg" alt="WaveLink">
-                <h3>WaveLink</h3>
-                <p>Gamified Ocean Conservation App</p>
+                <h3>WaveLink Mobile App</h3>
+                <pre><code>// Gamified Ocean Conservation
+// UOW | Sept 2024 – Dec 2024
+Daily missions, rewards, social features, beach cleanup tracker</code></pre>
             </div>
-            <div class="project-card glass-card" data-modal="climate" data-tilt>
+            <div class="project-card code-card" data-modal="climate" data-tilt>
                 <img src="assets/climate-changers.jpg" alt="Climate Changers">
                 <h3>Climate Changers</h3>
-                <p>Interactive Climate Awareness</p>
+                <pre><code>// Interactive Climate Awareness Web App
+// UOW | Feb 2025 – Jun 2025
+Chart.js visualizations, sustainable tips, mobile-first, animations</code></pre>
             </div>
-            <div class="project-card glass-card" data-modal="traffic" data-tilt>
+            <div class="project-card code-card" data-modal="traffic" data-tilt>
                 <img src="assets/traffic-analyzer.jpg" alt="Traffic Analyzer">
                 <h3>Traffic Insights</h3>
-                <p>Data Visualization Tool</p>
+                <pre><code>// Visualization for Local Governance
+// UOW | Sept 2024 – Dec 2024
+Python CSV analyzer – vehicle types, patterns, weather impact</code></pre>
             </div>
-            <div class="project-card glass-card" data-modal="construct" data-tilt>
+            <div class="project-card code-card" data-modal="construct" data-tilt>
                 <img src="assets/construct-connect.jpg" alt="Construct Connect">
                 <h3>Construct Connect</h3>
-                <p>Talent Platform Concept</p>
+                <pre><code>// Talent Platform Concept
+// IIT | Jan 2023 – March 2024
+Figma UI, job seeker ↔ recruiter matching, networking focus</code></pre>
             </div>
         </div>
     </section>
 
     <div id="modal" class="modal">
-        <div class="modal-content glass-card">
+        <div class="modal-content code-card">
             <span class="close"><i class="fas fa-times"></i></span>
             <div id="modal-body"></div>
         </div>
@@ -130,42 +133,54 @@
         <div class="timeline">
             <div class="timeline-item" data-aos="fade-right">
                 <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-                <div class="timeline-content glass-card">
+                <div class="timeline-content code-card">
                     <h3>B.Sc. (Hons) Computer Science</h3>
                     <span class="date">2024 – 2028</span>
                     <p>University of Westminster / IIT</p>
-                    <ul class="grades">
-                        <li>Second Year: HCI 91%, Database 80%, OOP 67%...</li>
-                        <li>First Year: Computer Systems 90%, Java 78%...</li>
-                    </ul>
+                    <pre><code>Second Year:
+• OOP → 67%
+• Database → 80%
+• HCI → 91%
+...
+
+First Year:
+• Python → 69%
+• Java → 78%
+• Systems → 90%</code></pre>
                 </div>
             </div>
-            <!-- Add other education items similarly -->
-            <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
-                <div class="timeline-content glass-card">
-                    <h3>Foundation in Software Engineering</h3>
-                    <span class="date">2023 – 2024</span>
-                    <p>IIT – Pass with Merit</p>
-                </div>
-            </div>
-            <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-icon"><i class="fas fa-school"></i></div>
-                <div class="timeline-content glass-card">
-                    <h3>GCE Ordinary Level</h3>
-                    <span class="date">Mahanama College</span>
-                    <p>6 A's, 3 B's</p>
-                </div>
-            </div>
+            <!-- Add other items similarly -->
         </div>
     </section>
 
-    <!-- Certifications & Volunteer similar glass-card lists -->
+    <section id="certifications" class="section container" data-aos="fade-up">
+        <h2>Certifications</h2>
+        <div class="code-card">
+            <pre><code>• Python – HackerRank
+• Java – HackerRank
+• Prompt Engineering – DeepLearning.AI
+• Transformer-based NLP – NVIDIA
+• Quantum Computing – Alison
+• Machine Learning – IIT PDU
+• Azure Cloud
+• Zero Trust Frameworks
+...</code></pre>
+        </div>
+    </section>
+
+    <section id="volunteer" class="section container" data-aos="fade-up">
+        <h2>Volunteer Experience</h2>
+        <div class="code-card">
+            <pre><code>• IIT Rotaract Club
+• IEER RAAS
+• IEEE Computer Society</code></pre>
+        </div>
+    </section>
 
     <section id="contact" class="section container" data-aos="fade-up">
-        <h2>Get in Touch</h2>
+        <h2>Contact /msg</h2>
         <div class="contact-grid">
-            <div class="glass-card">
+            <div class="code-card">
                 <p><i class="fas fa-phone"></i> 070 656 5007</p>
                 <p><i class="fas fa-envelope"></i> thisal.20231581@iit.ac.lk</p>
                 <div class="social">
@@ -173,10 +188,16 @@
                     <a href="https://github.com/thisal2006" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <form id="contact-form" class="glass-card" action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Message" required></textarea>
+
+            <form id="contact-form" class="code-card" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                <input type="hidden" name="subject" value="New message from Portfolio Site">
+                <input type="hidden" name="from_name" value="Portfolio Visitor">
+
+                <input type="text"   name="name"    placeholder="Your Name"    required>
+                <input type="email"  name="email"   placeholder="Your Email"   required>
+                <textarea name="message" placeholder="Message / Inquiry" required rows="5"></textarea>
+
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -184,15 +205,14 @@
 
     <footer>
         <div class="container">
-            <p>References available upon request</p>
-            <p>© 2026 Thisal Sandayuru</p>
+            <p>References available on request</p>
+            <p>© 2026 Thisal Sandayuru • Built with <i class="fas fa-heart" style="color:#f33;"></i> & Code</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>
