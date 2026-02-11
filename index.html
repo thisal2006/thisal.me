@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body data-theme="dark">
     <!-- Splash Screen -->
     <div id="splash" class="splash">
         <div class="terminal-load">
-            <p class="prompt"><span class="green">$</span> loading portfolio...</p>
-            <p class="output"><span class="blink">_</span></p>
+            <p class="prompt"><span class="green">$</span> initializing portfolio...</p>
+            <p class="output">Loading modules: profile.js, skills.stack, projects.repo...</p>
+            <p class="output">Compiling CV data... <span class="blink">_</span></p>
+            <p class="output">System ready. Welcome, coder.</p>
         </div>
     </div>
 
     <!-- Theme Toggle -->
     <button id="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-terminal"></i>
+        <i class="fas fa-moon"></i>
     </button>
 
-    <header>
+    <header class="sticky">
         <nav class="container">
             <div class="logo"><span class="code">&lt;</span>Thisal Sandayuru<span class="code">/&gt;</span></div>
             <ul>
@@ -47,14 +48,14 @@
         </section>
 
         <section id="about" class="section container">
-            <h2>whoami</h2>
+            <h2>Personal Profile</h2>
             <p class="profile-text">
                 19-year-old ambitious undergraduate at the Informatics Institute of Technology (IIT), pursuing studies in technology since 2023. Early university entrant with a strong foundation in Python programming, Java and web development. Certified in Quantum Computing, Transformer-based NLP, Artificial Intelligence, Cloud Computing (Microsoft Azure), AI Prompt Engineering (DeepLearning.AI), ChatGPT for Developers, and Zero Trust Frameworks. Creative problem-solver blending leadership, adaptability, and a passion for emerging technologies.
             </p>
         </section>
 
         <section id="skills" class="section container">
-            <h2>Skills & Stack</h2>
+            <h2>Skills</h2>
             <div class="skills-grid">
                 <div class="card">
                     <h3>Software Knowledge</h3>
@@ -72,7 +73,7 @@
                     <h3>Personal Skills</h3>
                     <ul>
                         <li>Creativity</li>
-                        <li>Team Building</li>
+                        <li>Team building</li>
                         <li>Communication</li>
                         <li>Problem Solving</li>
                         <li>Leadership</li>
@@ -83,81 +84,126 @@
                 <div class="card">
                     <h3>Languages</h3>
                     <ul>
-                        <li>Sinhala – Native</li>
-                        <li>English – Fluent</li>
+                        <li>Sinhala</li>
+                        <li>English</li>
                     </ul>
-                </div>
-                <div class="card radar-card">
-                    <h3>Skill Radar</h3>
-                    <canvas id="radar" width="280" height="280"></canvas>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="section container">
-            <h2>Projects /repos</h2>
+            <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="card project" data-project="muc">
-                    <h3>MUC Digital</h3>
-                    <p>Smart Municipal Services Platform</p>
-                    <small>SDGP | Sept 2025 – Present</small>
+                    <h3>MUC Digital – Smart Municipal Services Platform</h3>
+                    <p>SDGP | Sept 2025 – Present</p>
+                    <p>Leading the development of a comprehensive web and mobile platform to fully digitalize Maharagama Urban Council services. Features real-time GPS-enabled garbage truck tracking with citizen notifications, online booking for public properties/vehicles and cemetery slots with integrated payments, one-tap emergency access, push announcements, and an AI chatbot. Built using Flutter/React, Node.js, Firebase (real-time & FCM), Google Maps API, and PayHere gateway to improve efficiency, transparency, and citizen satisfaction.</p>
                 </div>
+
                 <div class="card project" data-project="wavelink">
                     <h3>WaveLink Mobile App</h3>
-                    <p>Gamified Ocean Conservation</p>
-                    <small>UOW | Sept 2024 – Dec 2024</small>
+                    <p>UOW | Sept 2024 – Dec 2024</p>
+                    <p>Gamified ocean conservation platform that turns beach cleanups and marine protection into daily missions with rewards, progress tracking, and social features. Focused on solving plastic waste, low youth engagement, and lack of measurable impact in traditional environmental initiatives.</p>
                 </div>
+
                 <div class="card project" data-project="climate">
-                    <h3>Climate Changers</h3>
-                    <p>Interactive Climate Awareness Web App</p>
-                    <small>UOW | Feb 2025 – Jun 2025</small>
+                    <h3>Climate Changers – Interactive Climate Awareness Web App</h3>
+                    <p>UOW | Feb 2025 – Jun 2025</p>
+                    <p>Designed and developed a fully responsive educational web application to raise climate change awareness. Built interactive data visualizations of global temperature rise and CO₂ emissions using Chart.js, integrated sustainable living tips through dynamic modals, and implemented smooth animations and mobile-first design with HTML, CSS (media queries), and vanilla JavaScript.</p>
                 </div>
+
                 <div class="card project" data-project="traffic">
                     <h3>Traffic Analyzer</h3>
-                    <p>Traffic Insights & Visualization</p>
-                    <small>UOW | Sept 2024 – Dec 2024</small>
+                    <p>UOW | Sept 2024 – Dec 2024</p>
+                    <p>Developed Python software for analyzing traffic flow data from Elm Avenue/Rabbit Road and Hanley Highway/Westway—two major intersections under local council authority. The app simplifies CSV file selection and analysis, offering detailed insights into vehicle types, traffic patterns, and weather conditions.</p>
                 </div>
+
                 <div class="card project" data-project="construct">
                     <h3>Construct Connect</h3>
-                    <p>Talent Platform for Construction</p>
-                    <small>IIT | Jan 2023 – March 2024</small>
+                    <p>IIT | Jan 2023 – March 2024</p>
+                    <p>In-depth research on talent acquisition in the construction industry, leading to the conceptual design of Construct Connect—a platform bridging job seekers, recruiters, and professionals. Using Figma, crafted an intuitive frontend UI focused on seamless matching and networking.</p>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="section container">
-            <h2>Education</h2>
-            <div class="card">
+<section id="education" class="section container" data-aos="fade-up">
+    <h2>Education</h2>
+
+    <div class="timeline">
+
+        <!-- B.Sc. -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
                 <h3>B.Sc. (Hons) Computer Science</h3>
-                <p>University of Westminster / IIT (2024–2028)</p>
-                <p>Second Year: OOP 67%, Database 80%, HCI 91%, Client-Side 78%...</p>
-                <p>First Year: Python 69%, Java 78%, Systems 90%, Web Dev 60%...</p>
+                <div class="meta">University of Westminster / IIT • 2024 – 2028</div>
+
+                <div class="year-group">
+                    <div class="year-title">Second Year</div>
+                    <ul class="grades-list">
+                        <li>Object Oriented Programming → 67%</li>
+                        <li>Database Systems → 80%</li>
+                        <li>Software Development Group Project → 56%</li>
+                        <li>Advanced Client Side Development → 78%</li>
+                        <li>Human Computer Interaction (HCI) → 91%</li>
+                        <li>Client-Server Architectures → N/A</li>
+                        <li>Professional Development (Part A) → 100%</li>
+                    </ul>
+                </div>
+
+                <div class="year-group">
+                    <div class="year-title">First Year</div>
+                    <ul class="grades-list">
+                        <li>Software Development I (Python) → 69%</li>
+                        <li>Software Development II (Java) → 78%</li>
+                        <li>Computer Systems Fundamentals → 90%</li>
+                        <li>Trends in Computer Science → 63%</li>
+                        <li>Web Design and Development → 60%</li>
+                        <li>Mathematics for Computing → 64%</li>
+                    </ul>
+                </div>
             </div>
-            <div class="card">
-                <h3>Foundation in Software Engineering</h3>
-                <p>IIT (2023–2024) – Pass with Merit</p>
+        </div>
+
+        <!-- Foundation -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
+                <h3>Foundation Certificate in Software Engineering</h3>
+                <div class="meta">Informatics Institute of Technology • 2023 – 2024</div>
+                <p>Pass with Merit</p>
             </div>
-            <div class="card">
+        </div>
+
+        <!-- O/L -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
                 <h3>GCE Ordinary Level</h3>
-                <p>Mahanama College – 6 A's, 3 B's</p>
+                <div class="meta">Mahanama College, Colombo 03, Sri Lanka</div>
+                <p>Results: 6 A's, 3 B's</p>
+                <p class="small">Mathematics A, Sinhala Lang. & Lit. A, History A, Commerce A, Health Science A, Drama & Performing Arts A, English B, Science B, Buddhism B</p>
             </div>
-        </section>
+        </div>
+
+    </div>
+</section>
 
         <section id="certifications" class="section container">
             <h2>Certifications</h2>
             <div class="card">
                 <ul class="list">
-                    <li>Python Course – HackerRank</li>
-                    <li>Java Course – HackerRank</li>
-                    <li>AI for Beginners – HP Life</li>
-                    <li>Prompt Engineering for Developers – DeepLearning.AI</li>
-                    <li>Introduction to ICT Systems – Open University</li>
-                    <li>Introduction to Cybersecurity – Cisco Labs</li>
-                    <li>Python Programming – UOM</li>
-                    <li>Gateway to Quantum Computing – Alison</li>
-                    <li>Foundation Program for Software Engineering – IIT</li>
-                    <li>Introduction to Transformer-Based NLP – NVIDIA</li>
-                    <li>Professional Certificate in Machine Learning – IIT PDU</li>
+                    <li>Python Course by HackerRank</li>
+                    <li>Java Course by HackerRank</li>
+                    <li>AI for Beginners by HP Life</li>
+                    <li>Prompt Engineering for Developers by DeepLearning.AI</li>
+                    <li>Introduction to ICT Systems by Open University</li>
+                    <li>Introduction to Cybersecurity by Cisco Labs</li>
+                    <li>Python Programming by UOM</li>
+                    <li>Gateway to Quantum Computing by Alison</li>
+                    <li>Foundation Program for Software Engineering Students by Informatics Institute of Technology</li>
+                    <li>Introduction to Transformer-Based Natural Language Processing by NVIDIA</li>
+                    <li>Professional Certificate in Machine Learning by IIT PDU</li>
                 </ul>
             </div>
         </section>
@@ -166,9 +212,9 @@
             <h2>Volunteer Experience</h2>
             <div class="card">
                 <ul class="list">
-                    <li>Member – IIT Rotaract Club</li>
-                    <li>Member – IEER RAAS</li>
-                    <li>Member – IEEE Computer Society</li>
+                    <li>Member of IIT Rotaract Club</li>
+                    <li>Member of IEER RAAS</li>
+                    <li>Member of IEEE Computer Society</li>
                 </ul>
             </div>
         </section>
@@ -179,30 +225,31 @@
                 <div class="card">
                     <p><i class="fas fa-phone"></i> 070 656 5007</p>
                     <p><i class="fas fa-envelope"></i> thisal.20231581@iit.ac.lk</p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/thisal-sandayuru-935b27334/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
-                        <a href="https://github.com/thisal2006" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </p>
+                    <p><i class="fas fa-linkedin"></i> <a href="https://www.linkedin.com/in/thisal-sandayuru-935b27334/" target="_blank">LinkedIn</a></p>
+                    <p><i class="fas fa-github"></i> <a href="https://github.com/thisal2006" target="_blank">GitHub</a></p>
                 </div>
-                <form action="https://api.web3forms.com/submit" method="POST" class="card">
+                <form action="https://api.web3forms.com/submit" method="POST" class="card form">
                     <input type="hidden" name="access_key" value="553e1bcc-9dba-42ae-bd96-46b4ff8d19f3">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Message" required rows="4"></textarea>
-                    <button type="submit" class="btn">Send</button>
+                    <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>References available upon request • © 2026 Thisal Sandayuru</p>
+        <div class="container">
+            <p>References: Chathuri Udagedara (chathuri.ud@iit.ac.lk), W.D.N.K Randeera (randeer.best.rox@gmail.com)</p>
+            <p>© 2026 Thisal Sandayuru • Built with Code & Passion</p>
+        </div>
     </footer>
 
     <!-- Project Modal -->
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+        <div class="modal-content card">
+            <span class="close">×</span>
             <h2 id="modal-title"></h2>
             <p id="modal-desc"></p>
         </div>
