@@ -11,6 +11,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
 </head>
 <body>
+    <div id="splash" class="splash">
+        <div class="splash-content">
+            <h2>Loading Portfolio...</h2>
+            <p>Initializing Matrix...</p>
+        </div>
+    </div>
     <canvas id="matrix-rain"></canvas>
 
     <header>
@@ -149,7 +155,22 @@ First Year:
 • Systems → 90%</code></pre>
                 </div>
             </div>
-            <!-- Add other items similarly -->
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                <div class="timeline-content code-card">
+                    <h3>Foundation Certificate in Software Engineering</h3>
+                    <span class="date">2023 – 2024</span>
+                    <p>IIT – Pass with Merit</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-icon"><i class="fas fa-school"></i></div>
+                <div class="timeline-content code-card">
+                    <h3>GCE Ordinary Level</h3>
+                    <span class="date">Mahanama College</span>
+                    <p>6 A's, 3 B's</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -158,13 +179,15 @@ First Year:
         <div class="code-card">
             <pre><code>• Python – HackerRank
 • Java – HackerRank
+• AI for Beginners – HP Life
 • Prompt Engineering – DeepLearning.AI
-• Transformer-based NLP – NVIDIA
+• ICT Systems – Open University
+• Cybersecurity – Cisco Labs
+• Python Programming – UOM
 • Quantum Computing – Alison
-• Machine Learning – IIT PDU
-• Azure Cloud
-• Zero Trust Frameworks
-...</code></pre>
+• Foundation SE – IIT
+• Transformer NLP – NVIDIA
+• Machine Learning – IIT PDU</code></pre>
         </div>
     </section>
 
@@ -188,16 +211,13 @@ First Year:
                     <a href="https://github.com/thisal2006" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-
             <form id="contact-form" class="code-card" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="553e1bcc-9dba-42ae-bd96-46b4ff8d19f3">
                 <input type="hidden" name="subject" value="New message from Portfolio Site">
                 <input type="hidden" name="from_name" value="Portfolio Visitor">
-
-                <input type="text"   name="name"    placeholder="Your Name"    required>
-                <input type="email"  name="email"   placeholder="Your Email"   required>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Message / Inquiry" required rows="5"></textarea>
-
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -217,5 +237,3 @@ First Year:
     <script src="script.js"></script>
 </body>
 </html>
-
->>>>>>> some-commit-hash
