@@ -9,24 +9,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body data-theme="dark">
-    <!-- Splash Screen -->
+    <!-- Enhanced Splash Screen -->
     <div id="splash" class="splash">
         <div class="terminal-load">
-            <p class="prompt"><span class="green">$</span> initializing portfolio...</p>
-            <p class="output">Loading modules: profile.js, skills.stack, projects.repo...</p>
-            <p class="output">Compiling CV data... <span class="blink">_</span></p>
-            <p class="output">System ready. Welcome, coder.</p>
+            <p class="prompt"><span class="green">user@thisal.me:~$</span> boot portfolio</p>
+            <p class="output">Loading profile... <span class="blink">_</span></p>
+            <p class="output">Initializing skills.stack...</p>
+            <p class="output">Compiling projects.repo...</p>
+            <p class="output">System ready. Welcome back, coder.</p>
         </div>
     </div>
 
-    <!-- Theme Toggle -->
+    <!-- Floating Theme Toggle -->
     <button id="theme-toggle" aria-label="Toggle theme">
         <i class="fas fa-moon"></i>
     </button>
 
     <header class="sticky">
         <nav class="container">
-            <div class="logo"><span class="code">&lt;</span>Thisal Sandayuru<span class="code">/&gt;</span></div>
+            <div class="logo glitch" data-text="Thisal Sandayuru">
+                <span class="code">&lt;</span>Thisal Sandayuru<span class="code">/&gt;</span>
+            </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -39,16 +42,18 @@
         </nav>
     </header>
 
-    <main>
-        <section id="hero" class="container">
-            <img src="assets/profile.jpg" alt="Thisal Sandayuru" class="profile-pic">
-            <h1>Thisal Sandayuru</h1>
-            <p class="tagline">Computer Science Undergraduate</p>
-            <a href="assets/resume.pdf" download class="btn">Download Resume</a>
+<main>
+        <section id="hero" class="hero container">
+            <div class="hero-content" data-aos="zoom-in">
+                <img src="assets/profile.jpg" alt="Thisal Sandayuru" class="profile-pic floating">
+                <h1 class="glitch" data-text="Thisal Sandayuru">Thisal Sandayuru</h1>
+                <p class="tagline">Computer Science Undergraduate</p>
+                <a href="assets/resume.pdf" download class="btn pulse">Download Resume</a>
+            </div>
         </section>
 
-        <section id="about" class="section container">
-            <h2>Personal Profile</h2>
+        <section id="about" class="section container" data-aos="fade-up">
+            <h2 class="section-title glitch" data-text="Personal Profile">Personal Profile</h2>
             <p class="profile-text">
                 19-year-old ambitious undergraduate at the Informatics Institute of Technology (IIT), pursuing studies in technology since 2023. Early university entrant with a strong foundation in Python programming, Java and web development. Certified in Quantum Computing, Transformer-based NLP, Artificial Intelligence, Cloud Computing (Microsoft Azure), AI Prompt Engineering (DeepLearning.AI), ChatGPT for Developers, and Zero Trust Frameworks. Creative problem-solver blending leadership, adaptability, and a passion for emerging technologies.
             </p>
@@ -94,31 +99,43 @@
         <section id="projects" class="section container">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="card project" data-project="muc">
+                <div class="card project" data-tilt data-project="muc">
                     <h3>MUC Digital – Smart Municipal Services Platform</h3>
                     <p>SDGP | Sept 2025 – Present</p>
                     <p>Leading the development of a comprehensive web and mobile platform to fully digitalize Maharagama Urban Council services. Features real-time GPS-enabled garbage truck tracking with citizen notifications, online booking for public properties/vehicles and cemetery slots with integrated payments, one-tap emergency access, push announcements, and an AI chatbot. Built using Flutter/React, Node.js, Firebase (real-time & FCM), Google Maps API, and PayHere gateway to improve efficiency, transparency, and citizen satisfaction.</p>
+                    <div class="tech-stack">
+                        <span>Flutter</span><span>React</span><span>Node.js</span><span>Firebase</span><span>Google Maps</span>
+                    </div>
                 </div>
 
-                <div class="card project" data-project="wavelink">
+                <div class="card project" data-tilt data-project="wavelink">
                     <h3>WaveLink Mobile App</h3>
                     <p>UOW | Sept 2024 – Dec 2024</p>
                     <p>Gamified ocean conservation platform that turns beach cleanups and marine protection into daily missions with rewards, progress tracking, and social features. Focused on solving plastic waste, low youth engagement, and lack of measurable impact in traditional environmental initiatives.</p>
+                    <div class="tech-stack">
+                        <span>Flutter</span><span>Node.js</span><span>Firebase</span><span>Google Maps</span>
+                    </div>
                 </div>
 
-                <div class="card project" data-project="climate">
+                <div class="card project" data-tilt data-project="climate">
                     <h3>Climate Changers – Interactive Climate Awareness Web App</h3>
                     <p>UOW | Feb 2025 – Jun 2025</p>
                     <p>Designed and developed a fully responsive educational web application to raise climate change awareness. Built interactive data visualizations of global temperature rise and CO₂ emissions using Chart.js, integrated sustainable living tips through dynamic modals, and implemented smooth animations and mobile-first design with HTML, CSS (media queries), and vanilla JavaScript.</p>
+                    <div class="tech-stack">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span>
+                    </div>
                 </div>
 
-                <div class="card project" data-project="traffic">
+                <div class="card project" data-tilt data-project="traffic">
                     <h3>Traffic Analyzer</h3>
                     <p>UOW | Sept 2024 – Dec 2024</p>
                     <p>Developed Python software for analyzing traffic flow data from Elm Avenue/Rabbit Road and Hanley Highway/Westway—two major intersections under local council authority. The app simplifies CSV file selection and analysis, offering detailed insights into vehicle types, traffic patterns, and weather conditions.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                    </div>
                 </div>
 
-                <div class="card project" data-project="construct">
+                <div class="card project" data-tilt data-project="construct">
                     <h3>Construct Connect</h3>
                     <p>IIT | Jan 2023 – March 2024</p>
                     <p>In-depth research on talent acquisition in the construction industry, leading to the conceptual design of Construct Connect—a platform bridging job seekers, recruiters, and professionals. Using Figma, crafted an intuitive frontend UI focused on seamless matching and networking.</p>
